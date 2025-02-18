@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Preenchimento de Endereço</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                azul: '#60a5fa',
+                verde: '#4ade80',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        * {
+            font-family: "Archivo", sans-serif;
+            margin: 20px;
+        }
+        
+    </style>
 </head>
-<body>
-    
+
+<body class="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+    <h2 class="mb-4 text-lg font-semibold text-gray-800">Preenchimento de endereço</h2>
+
+    <form id="formulario" class="w-full bg-white rounded-lg shadow-md p-14">
+      <div class="grid grid-cols-2 gap-4">
+        <label for="cep" class="font-medium text-gray-700">CEP:</label>
+        <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9" class="w-full px-3 py-2 border rounded-l focus:ring focus:ring-blue-300">
+        <label for="logradouro" class="font-medium text-gray-700">Av/Rua:</label>
+        <input type="text" id="logradouro" class="w-full px-3 py-2 border rounded focus:ring focus:ring-verde-300">
+        <label for="bairro" class="font-medium text-gray-700">Bairro:</label>
+        <input type="text" id="bairro" class="w-full px-3 py-2 border rounded focus:ring focus:ring-verde-300">
+        <label for="cidade" class="font-medium text-gray-700">Cidade:</label>
+        <input type="text" id="cidade" class="w-full px-3 py-2 border rounded focus:ring focus:ring-verde-300">
+        <label for="estado" class="font-medium text-gray-700">Estado:</label>
+        <input type="text" id="estado" class="w-full px-3 py-2 border rounded focus:ring focus:ring-verde-300">
+      </div>
+    </form>
+
+    <script src="script.js"></script>
 </body>
-</html>
